@@ -1,0 +1,140 @@
+/* Essa é a parte de CSS e comentário são feitos assim */
+/* Cascating Stylesheet */
+/* é preciso colocar um nome de uma tag que será modificada
+se eu colocar uma mesma tag duas vezes, a última é que conta */
+/* Linguagem de estilização */
+
+
+/* o height aparentemente modifica o tamanho das bordas entre
+ os textos */
+
+
+/* isso é um seletor universal, ou seja, o que eu modificar neste, altera todos */
+* {
+    margin: 0;
+}
+
+html, body {
+    --black: hsl(240, 6%, 13%);
+    --gray: hsl(240, 9%, 89%); /* isso é uma variável e os dois traços eu denomino uma variável */
+    /* "h" faz uma referência a cor em si
+    "s" é de satuação
+    "l" é de luz */
+
+    height: 100%;
+    font-family: "Roboto", sans-serif; /* primeiro ele busca pela fonte atribuida, caso contrário ele coloca outra fonte */
+    -webkit-font-smoothing: antialiased; /* isso não apresenta em todos os nagadores */
+
+}
+
+/* essa parte do body vai pegar os elementos e colocá-los em
+uma grade e separar em espaços iguais; 
+com background eu posso mudar a cor do fundo da página*/            
+body {
+    display: grid; /* ajuda a manter os elementos organizados e trabalhar com layouts diferentes */
+    place-items: center;
+}
+
+main {
+    background: url(images/background.png); /* ao invés de colocar apenas uma cor, eu coloco uma iamgem */
+    width: 375px;
+    height: 812px;
+    /* aqui eu fixo um tamanho do fundo e nesse caso foi utilizado uma medida fixa */
+}
+
+.content {
+    max-width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    color: var(--gray);
+}
+
+.avatar {
+    width: 10rem; /* equivale ao tamanho do pixel da página e o padrão é que 1rem = 16px */
+    margin: 11.5rem auto 0; /* top, laterais e botton */
+
+    position: relative; /* isso faz com que o absolute logo abaixo se refira ao avatar e não a página inteira */
+}
+
+.avatar span { /* procurar dentro do avatar, o span */
+    position: absolute; /* permite camadas de imagens */
+    top: -15px;
+    z-index: 1; /* o clip-path abaixo faz com que a imagem do perfil seja jogada para o plano acima do selo e z-index inverte isso novamente */
+}
+
+.avatar > img { 
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover;
+
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); /* dá um formato para a imagem */
+}
+/* utilizo o sinal de maior para indicar que é a img do primeiro nível, pois a outra imagem está no segundo nível,
+dentro do <span> */
+/* object-fit: cover faz o objeto, no caso a imagem voltar a sua proporção normal de forma a cobrir o espaço demarcado */
+
+
+h1 {
+    font-size: 1.5rem;
+
+    margin-top: 1.5rem;
+}
+
+a {
+    color: var(--gray);
+    text-decoration: none;
+
+    margin-top: 0.25rem;
+
+    display: flex;
+    gap: 0.75;
+
+    justify-content: center;
+    align-items: center; /* garante que os itens estejam centralizados nos dois eixos (X e Y) */
+}
+
+p {
+    margin-top: 2rem;
+}
+
+ul {
+    margin-top: 4rem;
+
+    list-style: none; /* para tirar as bolinhas de lista (tire o código para verificar) */
+    padding: 0;
+
+    display: flex; /* deixa os elementos em linha */
+    /* flex-direction: column poderia alterar para coluna */
+    gap: 0.5rem; /* espaçamento entre os elementos */
+
+    justify-content: center; /* alinhas os elementos ao centro e text-align não funciona por ele não considerar como texto */
+}
+
+/* cada nome que eu coloquei para especificar o que vou alterar se chama seletor, nesse caso, de elemento 
+Ex: a, h1, etc. */
+
+/* CSS vem de "cascata" pois o que vem mais abaixo é o que possui prioridade, ou seja, se houver duas
+ modificações para um mesmo seletor, aquele que vier abaixo é o que conta, mas se eu fizer uma modificação
+em linha (in line), por exemplo <h1 style="font-size: 1.5rem;">Something</h1>
+essa é a forma que possui maior força e é preferível evitar essa forma pois se for necessário modificar
+alguma coisa, terá que ficar voltando aqui sempre ao invés de sobrescrever diretamente */
+
+/* há algumas hierarquias de força entre os tipos de elementos seguindo do mais forte para o mais fraco:
+<>, ID selector, class/pseudo class/attribute selector, element selector
+ou seja, por mais que esteja em cascata, se um seletor anterior possuir algum fator mais "forte" a cascata
+será ignorada por assim dizer */
+
+/* Unidade de medida:
+Relative units - varia de acordo com o tamanho da tela (ex: tamanho medido por porcentagem)
+Static units - não varia de acordo com a tela (ex: quantidade de pixels) 
+Responsividade - varia de acordo com o tamanho da tela, nesse caso o layout da página, se for para computador
+ou se for para celular por exemplo*/
+
+/* existe algo no CSS que se chama Box Model (digamos, modelo de caixa), poderíamos dizer que é uma caixa que
+contém certos conteúdos da página e há algumas diferenças
+content - é o conteúdo em si
+padding - digamos que um certo preenchimento da caixa, algo entre o conteúdo e a borda
+border - a borda da caixa
+margin - espaço entre a borda e o limite da página */

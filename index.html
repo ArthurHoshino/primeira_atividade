@@ -1,0 +1,99 @@
+<!--
+    Isso é um comentário na linguagem do HTML
+    HTML: HyperText Markup Language
+
+    HyperText: um texto com link
+    Markup: tag ou marcações
+
+    Linguagem de marcações
+-->
+
+<!DOCTYPE html>
+
+<html> <!--uma tag raíz-->
+    <head> <!-- o nome da página -->
+        <title>Pagina basica</title>
+
+        <link rel="stylesheet" href="style.css" /> <!-- a tag fecha em si por não possuir conteúdo -->
+        <!-- a tag acima é uma tag de CSS -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- preconnect ele se conecta com o servidor do google e depois me manda a informação -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- crossorigin: buscar na minha origem, lá do google -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- referência da fonte para o CSS -->
+        <!-- esses três links são fontes retiradas do fonts.google.com -->
+
+        
+
+
+    </head>
+
+    <body> <!-- o corpo da página em si -->
+        
+        <main> <!-- cria como uma caixa de conteúdo principal -->
+
+            <div class="content"> <!-- div não possui um significado específico e por isso coloco uma classe -->
+
+                <div class="avatar">
+                   
+                    <span> <!-- usado em conjunto com outros atributos como classe, etc. servindo como "marcador", ver uso no CSS -->
+                        <img src="images/Selo.png" alt="Selo Rocketseat" /> <!-- src é a fonte de algo, no caso, da imagem -->
+                    </span>
+
+                    <img id="userImage" src="images/perfil.png" alt="Foto de perfil" /> <!-- alt é uma resposta alternativa para caso não haja nada na src -->
+                    <!-- o alt também pode servir para pessoas com deficiência visual para que o navegador fale o que está escrito -->
+                    <!-- no src, aquela é a forma de escrita para um diretório, que no caso é de um lugar que estará a imagem, mas
+                    é possível colocar um link de uma página da internet também -->
+
+                </div>
+
+                <h1 id="username">Username</h1> <!-- texto maior e negrito -->
+        
+                <a id="userGitHubLink" href="https://github.com/Argnastia" target="_blank">
+                    <img src="images/github.png" alt="ícone github" />
+                    <span id="userLogin">Usuário do GitHub</span></a> <!-- hyperlink: dentro das aspas você coloca o link -->
+                <!-- href é um atributo e nesse caso é uma referência, no caso um link. O valor do atributo vem entre aspas duplas -->
+
+                <p id="userBio">Aqui teria a sua bio do GitHub</p> <!-- tag de parágrafo -->
+
+                <ul id="socialLinks"> <!-- tag para lista em que a ordem não importa -->
+                    <li class="instagram"> <!-- tag para lista ordenada, como ele está dentro de ul ele terá relação com outros li aqui dentro, caso contrário, não -->
+                        <a href="https://instagram.com" target="_blank">
+                            <img src="images/instagram.png" alt="ícone instagram"/>
+                            <!-- o atributo target define um alvo de alguma coisa e _blank diz que é uma nova aba do navegador -->
+                        </a>
+                    </li>
+
+                    <li class="twitter">
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="images/twitter.png" alt="ícone twitter"/>
+                        </a>
+
+                    </li>
+
+                    <li class="pinterest">
+                        <a href="https://pinterest.com" target="_blank">
+                            <img src="images/pinterest.png" alt="ícone pinterest"/>
+                        </a>
+                    </li>
+
+                    <li class="youtube">
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="images/youtube1.png" alt="ícone youtube"/>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </main>
+        
+        <script src="main.js">
+            // assim eu posso puxar um arquivo de JavaScript evitando colocar tudo aqui
+            /* esse script deve vir aqui embaixo pois como no código de JS eu estou usando DOM (tem lá no arquivo de JS)
+            ele vai pegar os elementos do HTML, seguindo o pensamento de que o código é lido de cima para baixo, se eu colocar
+            ele acima ele vai acabar procurando por informações que ele ainda não leu e nem existem, logo eu coloco ele aqui
+            em baixo */
+        </script>
+
+    </body>
+</html>
