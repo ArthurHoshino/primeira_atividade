@@ -31,7 +31,7 @@ e para chamá-la basta colocar o nome da função com os parênteses */
 /* dentro dos parênteses eu posso criar uma certa variável que utilizo para alguma ação dentro da função */
 
 const linkSocialMedia = {
-    youtube: "UCP4nMSTdwU1KqYWu3UH5DHQ",
+    youtube: "UCXWAI_phsgjYj69IeQwtw7A",
     twitter: "ArthurHoshino",
     instagram: "arthur_hoshino",
     pinterest: "argnasta",
