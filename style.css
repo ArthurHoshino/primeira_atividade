@@ -36,9 +36,10 @@ body {
 }
 
 main {
-    background: url(images/background.png); /* ao invés de colocar apenas uma cor, eu coloco uma iamgem */
-    width: 375px;
-    height: 812px;
+    background: url(images/background.png) no-repeat center/cover; /* ao invés de colocar apenas uma cor, eu coloco uma iamgem */
+    width: 100vw;
+    min-height: 812px;
+    height: 100vh;
     /* aqui eu fixo um tamanho do fundo e nesse caso foi utilizado uma medida fixa */
 }
 
