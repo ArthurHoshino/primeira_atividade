@@ -43,6 +43,15 @@ main {
     /* aqui eu fixo um tamanho do fundo e nesse caso foi utilizado uma medida fixa */
 }
 
+@media screen and (min-width: 960px) {
+    main {
+       background: url(images/background2.png) no-repeat center/cover;
+       width: 100vw;
+       min-height: 812px;
+       height: 100vh;
+ }
+}
+
 .content {
     max-width: 250px;
     margin-right: auto;
