@@ -43,7 +43,7 @@ main {
     /* aqui eu fixo um tamanho do fundo e nesse caso foi utilizado uma medida fixa */
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1920px) {
     main {
        background: url(images/background2.png) no-repeat center/cover;
        width: 100vw;
